@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DepartmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\EmployeeController::class, 'index']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', function () {
+    return redirect('/employee');
+});
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/employee', [App\Http\Controllers\EmployeeController::class, 'index'])->name('index');
+Route::resource('/employee', EmployeeController::class);
+
+Route::resource('/department', DepartmentController::class);
+Route::get('/employee', [App\Http\Controllers\EmployeeController::class, 'search'])->name('employee.search');
+
+Auth::routes(['verify'=>true]);
