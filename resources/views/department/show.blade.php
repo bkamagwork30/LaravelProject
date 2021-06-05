@@ -11,7 +11,7 @@
         </a>
       </ul>
         <div class="row justify-content-center">
-          <form method="GET" class="form-inline my-2 my-lg-0" action="{{ route('employee.search') }}" enctype="multipart/form-data">
+          {{-- <form method="GET" class="form-inline my-2 my-lg-0" action="{{ route('employee.search') }}" enctype="multipart/form-data">
             @csrf
 
                 <input id="str" type="search" class="form-control" name="str" value="{{ old('str') }}"   autofocus>
@@ -20,7 +20,7 @@
           </form>
           <div class="col-md-12 text-right">
             <a class="mj_btn btn btn-success" href="/employee/create">Add New Employee</a>
-          </div>
+          </div> --}}
             <div class="col-md-12">
                 <br><br>
                 <div class="card">

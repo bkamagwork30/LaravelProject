@@ -40,11 +40,13 @@ class EmployeeController extends Controller
     {
         // $arr_dept = ['sample1','sample2','sample3']; 
         $arr_dept = Department::get('Department');
+        $arr_post = ['Manager', 'Supervisor', 'Employee', 'Coordinator', 'Instructor', 'Dean', 'Legal Advisor', 'Company Secretary'];
+        $arr_div = ['BSIT', 'BSCS', 'BSEMC', 'ACT', 'IT', 'Logistics and Operations', 'Engineering', 'Financial', 'Budget'];
         // dd($arr_dept);
         // $arr_dept = $arr_dept->Department;
         // $dept = Department::all();
         
-        return view('employee.create',compact('arr_dept'));
+        return view('employee.create',compact('arr_dept', 'arr_post', 'arr_div'));
     }
 
     /**
@@ -119,9 +121,11 @@ class EmployeeController extends Controller
     {
         $employee = Employee::find($id);
         $arr_dept = Department::get('Department'); 
+        $arr_post = ['Manager', 'Supervisor', 'Employee', 'Coordinator', 'Instructor', 'Dean', 'Legal Advisor', 'Company Secretary'];
+        $arr_div = ['BSIT', 'BSCS', 'BSEMC', 'ACT', 'IT', 'Logistics and Operations', 'Engineering', 'Financial', 'Budget'];
         // $arr_dept = ['sample1','sample2','sample3'];
 
-        return view('employee.edit', compact('employee', 'arr_dept'));
+        return view('employee.edit', compact('employee', 'arr_dept', 'arr_post', 'arr_div'));
 
         // $arr_dept = Department::get('Department');      
         // return view('employee.edit',compact('arr_dept'));

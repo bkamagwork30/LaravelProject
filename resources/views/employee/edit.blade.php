@@ -33,10 +33,10 @@
                                 <div class="form-group">
                                     <label for="Position">Position:</label>
                                     <select name="Position" id="Position">
-                                        @foreach($arr_dept as $dept)
-                                            <option value="Position">{{$dept}}</option>
+                                        @foreach($arr_post as $arr_post)
+                                            <option>{{$arr_post}}</option>
                                         @endforeach
-                                    </select>                               
+                                    </select>                              
                                 </div>  
 
                                 <div class="form-group">
@@ -51,10 +51,10 @@
                                 <div class="form-group">    
                                     <label for="Division">Division:</label>
                                     <select name="Division" id="Division">
-                                        @foreach($arr_dept as $dept)
-                                            <option value="Division">{{$dept}}</option>
+                                        @foreach($arr_div as $arr_div)
+                                            <option>{{$arr_div}}</option>
                                         @endforeach
-                                    </select>  
+                                    </select> 
                                     <br>
                                 </div>    
 

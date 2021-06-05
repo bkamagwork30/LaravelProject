@@ -46,8 +46,8 @@
 
                                 <label for="Position">Position:</label>
                                     <select name="Position" id="Position">
-                                        @foreach($arr_dept as $dept)
-                                            <option>{{$dept}}</option>
+                                        @foreach($arr_post as $arr_post)
+                                            <option>{{$arr_post}}</option>
                                         @endforeach
                                     </select>
                                 <br>
@@ -58,11 +58,12 @@
                                             <option>{{$dept->Department}}</option>
                                         @endforeach
                                     </select>
+                                <br>    
                                 
                                 <label for="Division">Division:</label>
                                 <select name="Division" id="Division">
-                                    @foreach($arr_dept as $dept)
-                                        <option>{{$dept}}</option>
+                                    @foreach($arr_div as $arr_div)
+                                        <option>{{$arr_div}}</option>
                                     @endforeach
                                 </select>    
                                 <br>

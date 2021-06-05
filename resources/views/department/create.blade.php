@@ -4,6 +4,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <a class="btn btn-info" href="/department">Back</a>
+                <br><br>
                 <div class="card">
                     <div class="card-body">
                         <form action="{{route('department.store')}}" method="POST" enctype= "multipart/form-data">

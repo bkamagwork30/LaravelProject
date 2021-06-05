@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Department;
+use App\Models\Employee;
 
 class DepartmentController extends Controller
 {
@@ -60,9 +61,14 @@ class DepartmentController extends Controller
      */
     public function show($id)
     {
+        // get department name 
         $department = Department::find($id);
-        // return view('department.show', compact('department'));
-        return redirect('/department');
+        
+        //get emplyerr under department name
+        $employee = Employee::where('Department', $department->Department)->get();
+        // dd($employee);
+        return view('department.show', compact('employee'));
+        // return redirect('/department');
     }
 
     /**

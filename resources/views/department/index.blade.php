@@ -34,7 +34,7 @@
                                         <td>{{$department->id}}</td>
                                         <td>{{$department->Department}}</td>
 
-                                        {{-- <td><a href="/department/{{$department->id}}" class="btn btn-info">View</a></td> --}}
+                                        <td><a href="/department/{{$department->id}}" class="btn btn-info">View</a></td>
                                         <td><a href="/department/{{$department->id}}/edit" class="btn btn-warning">Edit</a></td>
                                         <td><form action="{{route('department.destroy', $department->id)}}" method="POST">
                                             @method('DELETE')
